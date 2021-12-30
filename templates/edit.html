@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+{%block content%}
+<form method="POST" action="/update/{{employee.id}}" class="post-form">
+  {% csrf_token %}
+  <br>
+  <div>
+    <h3>Update details</h3>
+  </div>
+  <div>
+  <div class="form-group row"><label>Employe ID:</label>
+    <input type="text", value="{{employee.eid}}" name="eid" id="id_eid">
+  </div>
+    </div>
+   <div>
+  <div class="form-group row"><label>Employe Name:</label>
+    <input type="text", value="{{employee.ename}}" name="ename" id="id_ename">
+  </div>
+    </div>
+   <div>
+  <div class="form-group row"><label>Employe Mail:</label>
+    <input type="email", value="{{employee.eemail}}" name="eemail" id="id_eemail">
+  </div>
+    </div>
+   <div>
+  <div class="form-group row"><label>Employe Contact:</label>
+    <input type="text", value="{{employee.econtact}}" name="econtact" id="id_econtact">
+  </div>
+    </div>
+  <div>
+    <label></label>
+    <div><button type="submit" class="btn btn-succes">Update</button></div>
+  </div>
+
+</form>
+{%endblock%}
